@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LaCoupe</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="usernameText">Username</string>
+    <string name="passwordText">Password</string>
+    <string name="loginText">Login</string>
+    <string name="loginFailText">Login Unsuccessful</string>
+    <string name="loginSuccessText">Login Successful</string>
+    <string name="SignUpLinkText">No account yet? Create one here</string>
+    <string name="fullNameText">Full Name</string>
+    <string name="signUpText">Create Account</string>
+    <string name="existingMemberLinkText">Already a member? Login</string>
+    <string name="signUpFailText">Could not create a new account</string>
+    <string name="signUpSuccessText">Account Created</string>
+</resources>

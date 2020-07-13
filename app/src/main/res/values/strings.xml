@@ -14,4 +14,8 @@
     <string name="existingMemberLinkText">Already a member? Login</string>
     <string name="signUpFailText">Could not create a new account</string>
     <string name="signUpSuccessText">Account Created</string>
+    <string name="setup_player_profile_message">It looks like it\'s your first time here.\nSetup your player profile.</string>
+    <string name="player_name_hint">Player Name</string>
+    <string name="player_number_hint">Jersey Number</string>
+    <string name="ready">Ready</string>
 </resources>

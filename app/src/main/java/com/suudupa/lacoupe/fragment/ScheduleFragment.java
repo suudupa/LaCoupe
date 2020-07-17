@@ -13,19 +13,19 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.suudupa.lacoupe.R;
-import com.suudupa.lacoupe.viewModel.DashboardViewModel;
+import com.suudupa.lacoupe.viewModel.ScheduleViewModel;
 
-public class DashboardFragment extends Fragment {
+public class ScheduleFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private ScheduleViewModel scheduleViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        scheduleViewModel =
+                ViewModelProviders.of(this).get(ScheduleViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_schedule, container, false);
+        final TextView textView = root.findViewById(R.id.text_notifications);
+        scheduleViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

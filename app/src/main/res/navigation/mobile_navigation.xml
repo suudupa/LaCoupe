@@ -3,23 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_scores">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.suudupa.lacoupe.fragment.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_scores"
+        android:name="com.suudupa.lacoupe.fragment.ScoresFragment"
+        android:label="@string/title_scores"
+        tools:layout="@layout/fragment_scores" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.suudupa.lacoupe.fragment.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_standings"
+        android:name="com.suudupa.lacoupe.fragment.StandingsFragment"
+        android:label="@string/title_standings"
+        tools:layout="@layout/fragment_standings" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.suudupa.lacoupe.fragment.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_schedule"
+        android:name="com.suudupa.lacoupe.fragment.ScheduleFragment"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_schedule" />
+
 </navigation>

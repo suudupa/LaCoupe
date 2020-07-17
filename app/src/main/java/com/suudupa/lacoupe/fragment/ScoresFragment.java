@@ -13,19 +13,19 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.suudupa.lacoupe.R;
-import com.suudupa.lacoupe.viewModel.HomeViewModel;
+import com.suudupa.lacoupe.viewModel.ScoresViewModel;
 
-public class HomeFragment extends Fragment {
+public class ScoresFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private ScoresViewModel scoresViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        scoresViewModel =
+                ViewModelProviders.of(this).get(ScoresViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_scores, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        scoresViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

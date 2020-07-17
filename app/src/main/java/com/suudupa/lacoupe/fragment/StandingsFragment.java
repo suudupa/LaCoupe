@@ -13,19 +13,19 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.suudupa.lacoupe.R;
-import com.suudupa.lacoupe.viewModel.NotificationsViewModel;
+import com.suudupa.lacoupe.viewModel.StandingsViewModel;
 
-public class NotificationsFragment extends Fragment {
+public class StandingsFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private StandingsViewModel standingsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        standingsViewModel =
+                ViewModelProviders.of(this).get(StandingsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_standings, container, false);
+        final TextView textView = root.findViewById(R.id.text_dashboard);
+        standingsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

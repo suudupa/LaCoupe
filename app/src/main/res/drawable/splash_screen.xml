@@ -3,6 +3,6 @@
     android:opacity="opaque">
     <item android:drawable="@color/colorPrimary" />
     <item
-        android:drawable="@drawable/ic_soccer_player_bicycle_kick"
+        android:drawable="@drawable/ic_world_cup_trophy"
         android:gravity="center"/>
 </layer-list>

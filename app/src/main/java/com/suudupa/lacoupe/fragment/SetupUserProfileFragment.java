@@ -13,11 +13,14 @@ import androidx.fragment.app.Fragment;
 
 import com.suudupa.lacoupe.activity.MainActivity;
 import com.suudupa.lacoupe.databinding.FragmentSetupUserProfileBinding;
+import com.suudupa.lacoupe.model.UserModel;
+import com.suudupa.lacoupe.repository.RealmRepo;
 import com.suudupa.lacoupe.utility.SharedPreferences;
 
 public class SetupUserProfileFragment extends Fragment implements View.OnClickListener {
 
     private FragmentSetupUserProfileBinding binding;
+    private RealmRepo realmRepo = new RealmRepo();
 
     @Nullable
     @Override
@@ -41,6 +44,7 @@ public class SetupUserProfileFragment extends Fragment implements View.OnClickLi
         String playerName = binding.playerNameEt.getText().toString().trim();
         String jerseyNumber = binding.playerNumberEt.getText().toString().trim();
         if (isUserProfileValid(playerName, jerseyNumber)) {
+            realmRepo.insertOrUpdate(new UserModel(playerName, Integer.parseInt(jerseyNumber)));
             SharedPreferences.INSTANCE.saveBoolean(requireContext(), SharedPreferences.isUserFirstTime, false);
             startActivity(new Intent(getContext(), MainActivity.class));
             requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

@@ -6,9 +6,9 @@ import io.realm.annotations.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-open class UserModel(
+open class MatchModel(
         @PrimaryKey
-        var fullName: String = "",
-        var jerseyNumber: Int = 1,
-        var wins: Int = 0
+        var matchId: String = "",
+        var date: String = "",
+        var players: List<PlayerModel> = ArrayList()
 ) : RealmObject(), Parcelable

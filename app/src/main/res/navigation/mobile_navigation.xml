@@ -17,10 +17,4 @@
         android:label="@string/title_standings"
         tools:layout="@layout/fragment_standings" />
 
-    <fragment
-        android:id="@+id/navigation_schedule"
-        android:name="com.suudupa.lacoupe.fragment.ScheduleFragment"
-        android:label="@string/title_schedule"
-        tools:layout="@layout/fragment_schedule" />
-
 </navigation>

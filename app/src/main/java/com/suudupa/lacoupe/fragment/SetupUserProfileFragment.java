@@ -44,7 +44,7 @@ public class SetupUserProfileFragment extends Fragment implements View.OnClickLi
         String playerName = binding.playerNameEt.getText().toString().trim();
         String jerseyNumber = binding.playerNumberEt.getText().toString().trim();
         if (isUserProfileValid(playerName, jerseyNumber)) {
-            realmRepo.insertOrUpdate(new UserModel(playerName, Integer.parseInt(jerseyNumber)));
+            realmRepo.insertOrUpdate(new UserModel(playerName, Integer.parseInt(jerseyNumber), 0));
             SharedPreferences.INSTANCE.saveBoolean(requireContext(), SharedPreferences.isUserFirstTime, false);
             startActivity(new Intent(getContext(), MainActivity.class));
             requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

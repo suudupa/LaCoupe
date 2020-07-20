@@ -17,20 +17,8 @@ import com.suudupa.lacoupe.viewModel.ScoresViewModel;
 
 public class ScoresFragment extends Fragment {
 
-    private ScoresViewModel scoresViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        scoresViewModel =
-                ViewModelProviders.of(this).get(ScoresViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_scores, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        scoresViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        return inflater.inflate(R.layout.fragment_scores, container, false);
     }
 }

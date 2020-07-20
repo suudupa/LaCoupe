@@ -10,5 +10,6 @@ open class UserModel(
         @PrimaryKey
         var fullName: String = "",
         var jerseyNumber: Int = 1,
-        var wins: Int = 0
+        var wins: Int = 0,
+        var isMain: Boolean = false
 ) : RealmObject(), Parcelable

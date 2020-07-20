@@ -19,18 +19,11 @@ public class StandingsFragment extends Fragment {
 
     private StandingsViewModel standingsViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        standingsViewModel =
-                ViewModelProviders.of(this).get(StandingsViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        standingsViewModel = ViewModelProviders.of(this).get(StandingsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_standings, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
-        standingsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        standingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 }

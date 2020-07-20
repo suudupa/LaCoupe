@@ -6,4 +6,9 @@
     <string name="player_name_hint">Player Name</string>
     <string name="player_number_hint">Jersey Number</string>
     <string name="ready">Ready</string>
+    <string name="greetingUser">%s, &lt;br/> &lt;b> %s &lt;/b></string>
+    <string name="goodMorning">Good Morning</string>
+    <string name="goodAfternoon">Good Afternoon</string>
+    <string name="goodEvening">Good Evening</string>
+    <string name="hello">Hey</string>
 </resources>

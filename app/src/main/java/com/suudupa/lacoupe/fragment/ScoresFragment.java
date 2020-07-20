@@ -1,24 +1,27 @@
 package com.suudupa.lacoupe.fragment;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
-import com.suudupa.lacoupe.R;
+import com.suudupa.lacoupe.databinding.FragmentScoresBinding;
 import com.suudupa.lacoupe.viewModel.ScoresViewModel;
 
 public class ScoresFragment extends Fragment {
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_scores, container, false);
+    private FragmentScoresBinding binding;
+    private ScoresViewModel scoresViewModel;
+
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentScoresBinding.inflate(inflater, container, false);
+        scoresViewModel = new ViewModelProvider.AndroidViewModelFactory(requireActivity().getApplication()).create(ScoresViewModel.class);
+        scoresViewModel.getText().observe(getViewLifecycleOwner(), s -> binding.greetingTv.setText(Html.fromHtml(s)));
+        return binding.getRoot();
     }
 }

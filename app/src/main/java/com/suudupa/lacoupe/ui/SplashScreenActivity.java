@@ -1,4 +1,4 @@
-package com.suudupa.lacoupe.activity;
+package com.suudupa.lacoupe.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.suudupa.lacoupe.R;
-import com.suudupa.lacoupe.fragment.SetupUserProfileFragment;
+import com.suudupa.lacoupe.ui.MainActivity;
+import com.suudupa.lacoupe.ui.SetupUserProfileFragment;
 import com.suudupa.lacoupe.utility.SharedPreferences;
 
 public class SplashScreenActivity extends AppCompatActivity {

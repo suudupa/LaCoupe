@@ -18,7 +18,6 @@ object SharedPreferences {
             Log.d(TAG, e.message.toString())
             defaultValue
         }
-
     }
 
     fun save(context: Context, settingName: String, settingValue: String) {

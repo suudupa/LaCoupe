@@ -1,4 +1,4 @@
-package com.suudupa.lacoupe.fragment;
+package com.suudupa.lacoupe.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.suudupa.lacoupe.activity.MainActivity;
 import com.suudupa.lacoupe.databinding.FragmentSetupUserProfileBinding;
 import com.suudupa.lacoupe.model.UserModel;
 import com.suudupa.lacoupe.repository.RealmRepo;

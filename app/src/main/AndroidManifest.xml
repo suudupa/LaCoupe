@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
         <activity
-            android:name=".activity.SplashScreenActivity"
+            android:name=".ui.SplashScreenActivity"
             android:theme="@style/SplashTheme"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>

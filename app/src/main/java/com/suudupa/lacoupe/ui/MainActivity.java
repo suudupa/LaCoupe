@@ -1,4 +1,4 @@
-package com.suudupa.lacoupe.activity;
+package com.suudupa.lacoupe.ui;
 
 import android.os.Bundle;
 

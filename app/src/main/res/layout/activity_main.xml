@@ -27,7 +27,7 @@
             app:menu="@menu/bottom_nav_menu" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/newGameBtn"
+            android:id="@+id/newItemBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
@@ -39,8 +39,8 @@
             app:layout_constraintBottom_toBottomOf="@id/nav_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:maxImageSize="32dp"
-            app:srcCompat="@drawable/ic_new_game" />
+            app:maxImageSize="34dp"
+            tools:srcCompat="@drawable/ic_new_player" />
 
         <fragment
             android:id="@+id/nav_host_fragment"

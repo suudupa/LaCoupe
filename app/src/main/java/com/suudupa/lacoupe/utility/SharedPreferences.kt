@@ -8,8 +8,7 @@ object SharedPreferences {
     private const val TAG = "SharedPreferences"
     private const val PREFERENCES_FILE = "app_settings"
 
-    const val isUserLoggedIn = "userLoggedIn"
-    const val user = "username"
+    const val isUserFirstTime = "userFirstTime"
 
     fun read(context: Context, settingName: String, defaultValue: String): String {
         return try {
@@ -19,7 +18,6 @@ object SharedPreferences {
             Log.d(TAG, e.message.toString())
             defaultValue
         }
-
     }
 
     fun save(context: Context, settingName: String, settingValue: String) {

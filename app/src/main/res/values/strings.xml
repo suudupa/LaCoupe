@@ -1,17 +1,19 @@
 <resources>
     <string name="app_name">LaCoupe</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="usernameText">Username</string>
-    <string name="passwordText">Password</string>
-    <string name="loginText">Login</string>
-    <string name="loginFailText">Login Unsuccessful</string>
-    <string name="loginSuccessText">Login Successful</string>
-    <string name="SignUpLinkText">No account yet? Create one here</string>
-    <string name="fullNameText">Full Name</string>
-    <string name="signUpText">Create Account</string>
-    <string name="existingMemberLinkText">Already a member? Login</string>
-    <string name="signUpFailText">Could not create a new account</string>
-    <string name="signUpSuccessText">Account Created</string>
+    <string name="title_scores">Scores</string>
+    <string name="title_standings">Standings</string>
+    <string name="setup_player_profile_message">It looks like it\'s your first time here.\nSetup your player profile.</string>
+    <string name="player_name_hint">Player Name</string>
+    <string name="player_number_hint">Jersey Number</string>
+    <string name="greetingUser">%s, &lt;br/> &lt;b> %s &lt;/b></string>
+    <string name="goodMorning">Good Morning</string>
+    <string name="goodAfternoon">Good Afternoon</string>
+    <string name="goodEvening">Good Evening</string>
+    <string name="hello">Hey</string>
+    <string name="add_new_player_profile_message">Add a new player to the competition by\nfilling in the fields below.</string>
+    <string name="title_new_player">New Player</string>
+    <string name="error_empty_fields">Fields cannot be empty.</string>
+    <string name="error_name_invalid">Player name cannot exceed 50 characters.</string>
+    <string name="error_number_invalid">Jersey number must be between 1 and 99.</string>
+    <string name="error_number_taken">Jersey number is already taken.</string>
 </resources>

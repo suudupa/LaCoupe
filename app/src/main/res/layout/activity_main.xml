@@ -8,11 +8,12 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container"
+        android:id="@+id/mainContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="?attr/actionBarSize"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.MainActivity">
 
         <com.suudupa.lacoupe.utility.widget.CurvedBottomNavigationView
             android:id="@+id/nav_view"
@@ -39,7 +40,7 @@
             app:layout_constraintBottom_toBottomOf="@id/nav_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:maxImageSize="34dp"
+            app:maxImageSize="33dp"
             tools:srcCompat="@drawable/ic_new_player" />
 
         <fragment

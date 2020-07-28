@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
         tools:context=".fragment.ScoresFragment">
 
         <TextView
@@ -21,6 +22,7 @@
             android:gravity="center"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
+            android:paddingTop="35dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

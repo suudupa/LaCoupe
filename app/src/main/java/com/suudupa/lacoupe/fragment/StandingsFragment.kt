@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.suudupa.lacoupe.R
+import com.suudupa.lacoupe.utility.Utils
 import com.suudupa.lacoupe.viewModel.StandingsViewModel
 
 class StandingsFragment : Fragment() {
@@ -18,8 +19,9 @@ class StandingsFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        Utils.changeStatusBarColor(requireActivity(), android.R.color.transparent)
         val root = inflater.inflate(R.layout.fragment_standings, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+        val textView: TextView = root.findViewById(R.id.text_standings)
         standingsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })

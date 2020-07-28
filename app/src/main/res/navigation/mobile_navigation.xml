@@ -17,4 +17,10 @@
         android:label="@string/title_standings"
         tools:layout="@layout/fragment_standings" />
 
+    <fragment
+        android:id="@+id/navigation_create_player_profile"
+        android:name="com.suudupa.lacoupe.ui.CreatePlayerProfileFragment"
+        android:label="@string/title_new_player"
+        tools:layout="@layout/fragment_create_player_profile" />
+
 </navigation>

@@ -14,7 +14,11 @@ class ScoresViewModel (val app: Application): AndroidViewModel(app) {
     private val realmRepo = RealmRepo()
 
     private val _greeting = MutableLiveData<String>().apply {
-        value = app.getString(R.string.greetingUser, app.getString(greeting()), getCurrentUser())
+        value = try {
+            app.getString(R.string.greetingUser, app.getString(greeting()), getCurrentUser())
+        } catch (e: Exception) {
+            app.getString(R.string.greetingUser, app.getString(greeting()), "User")
+        }
     }
     val greeting: LiveData<String> = _greeting
 

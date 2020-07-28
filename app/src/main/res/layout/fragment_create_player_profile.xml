@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
-        tools:context=".ui.SetupUserProfileFragment">
+        android:animateLayoutChanges="true">
 
         <ImageView
             android:id="@+id/imageView"
@@ -21,7 +21,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_soccer_player_dribbling" />
+            tools:srcCompat="@drawable/ic_soccer_player_running" />
 
         <TextView
             android:id="@+id/textView"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/setup_player_profile_message"
+            tools:text="@string/add_new_player_profile_message"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="20sp"
@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:theme="@style/EditTextTheme"
             android:autofillHints="@string/player_name_hint"
             android:ems="10"
             android:fontFamily="sans-serif-light"
@@ -57,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:theme="@style/EditTextTheme"
             android:autofillHints="@string/player_number_hint"
             android:ems="10"
             android:fontFamily="sans-serif-light"
@@ -67,20 +69,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/playerNameEt" />
 
-        <Button
-            android:id="@+id/readyBtn"
-            style="@style/Widget.AppCompat.Button.Colored"
+        <TextView
+            android:id="@+id/errorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textAlignment="center"
+            android:textColor="@color/colorDarkRed"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/doneBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playerNumberEt"
+            tools:text="@string/error_name_invalid"
+            tools:visibility="invisible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/doneBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/ready"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
+            android:layout_gravity="bottom|end"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="37dp"
+            app:srcCompat="@drawable/ic_done" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

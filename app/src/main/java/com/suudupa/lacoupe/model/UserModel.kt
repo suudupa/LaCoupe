@@ -7,8 +7,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 open class UserModel(
-        @PrimaryKey
         var fullName: String = "",
+        @PrimaryKey
         var jerseyNumber: Int = 1,
         var wins: Int = 0,
         var isMain: Boolean = false

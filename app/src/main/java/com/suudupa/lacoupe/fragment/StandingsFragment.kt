@@ -21,7 +21,7 @@ class StandingsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Utils.changeStatusBarColor(requireActivity(), android.R.color.transparent)
         val root = inflater.inflate(R.layout.fragment_standings, container, false)
-        val textView: TextView = root.findViewById(R.id.text_standings)
+        val textView: TextView = root.findViewById(R.id.standingsMsgTv)
         standingsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })

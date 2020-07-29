@@ -22,9 +22,12 @@ class ScoresFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         changeStatusBarColor(requireActivity(), android.R.color.transparent)
         binding = FragmentScoresBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         scoresViewModel.greeting.observe(viewLifecycleOwner, Observer {
             binding.greetingTv.text = Html.fromHtml(it)
         })
-        return binding.root
     }
 }

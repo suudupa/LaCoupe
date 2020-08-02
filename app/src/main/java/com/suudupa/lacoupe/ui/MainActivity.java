@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavController.OnD
 
     @Override
     public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-        if (destination.getId() == R.id.navigation_create_player_profile) {
+        if (destination.getId() == R.id.navigation_create_player_profile || destination.getId() == R.id.navigation_add_new_game) {
             binding.newItemBtn.setVisibility(View.GONE);
             binding.navView.setVisibility(View.GONE);
         } else {
@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity implements NavController.OnD
             if (destination.getId() == R.id.navigation_standings) {
                 binding.newItemBtn.setImageResource(R.drawable.ic_new_player);
                 binding.newItemBtn.setTag(R.drawable.ic_new_player);
-                binding.newItemBtn.setOnClickListener(this);
             } else {
                 binding.newItemBtn.setImageResource(R.drawable.ic_new_game);
                 binding.newItemBtn.setTag(R.drawable.ic_new_game);
             }
+            binding.newItemBtn.setOnClickListener(this);
         }
     }
 
@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements NavController.OnD
             bundle.putInt("textView", R.string.add_new_player_profile_message);
             bundle.putBoolean("isUserFirstTime", false);
             navController.navigate(R.id.navigation_create_player_profile, bundle);
+        } else {
+            navController.navigate(R.id.navigation_add_new_game);
         }
     }
 }

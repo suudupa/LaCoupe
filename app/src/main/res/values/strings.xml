@@ -16,4 +16,12 @@
     <string name="error_name_invalid">Player name cannot exceed 50 characters.</string>
     <string name="error_number_invalid">Jersey number must be between 1 and 99.</string>
     <string name="error_number_taken">Jersey number is already taken.</string>
+    <string name="position">#</string>
+    <string name="player">Player</string>
+    <string name="games_played">GP</string>
+    <string name="win">W</string>
+    <string name="add_new_game">Add a new game by\nfilling in the match details.</string>
+    <string name="game_location_hint">Field Name</string>
+    <string name="game_date_hint">Date</string>
+    <string name="title_new_game">New Game</string>
 </resources>

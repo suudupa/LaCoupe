@@ -23,4 +23,10 @@
         android:label="@string/title_new_player"
         tools:layout="@layout/fragment_create_player_profile" />
 
+    <fragment
+        android:id="@+id/navigation_add_new_game"
+        android:name="com.suudupa.lacoupe.fragment.AddNewGameFragment"
+        android:label="@string/title_new_game"
+        tools:layout="@layout/fragment_add_new_game" />
+
 </navigation>

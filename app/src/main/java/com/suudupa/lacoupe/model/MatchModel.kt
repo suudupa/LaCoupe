@@ -12,6 +12,6 @@ open class MatchModel(
         @PrimaryKey
         var matchId: String = "",
         var date: String = "",
-        var location: String = "",
+        var field: String = "",
         var players: @RawValue RealmList<PlayerModel> = RealmList()
 ) : RealmObject(), Parcelable

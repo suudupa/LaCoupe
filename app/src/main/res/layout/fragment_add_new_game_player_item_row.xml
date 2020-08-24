@@ -6,42 +6,48 @@
     <data>
         <variable
             name="data"
-            type="com.suudupa.lacoupe.model.PlayerModel" />
+            type="com.suudupa.lacoupe.model.UserModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="7dp"
-        android:paddingTop="7dp"
-        android:paddingEnd="7dp"
-        android:paddingBottom="7dp">
+        android:padding="11dp">
 
         <TextView
-            android:id="@+id/playerNameTv"
+            android:id="@+id/playerNumberTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.user.fullName}"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorAccent"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Super Long Player Name" />
+            tools:text="#88" />
 
         <TextView
-            android:id="@+id/playerScoreTv"
+            android:id="@+id/playerNameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="45dp"
             android:fontFamily="sans-serif-light"
-            android:text="@{Integer.toString(data.score)}"
+            android:text="@{data.fullName}"
             android:textColor="@color/colorAccent"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/playerNameTv"
+            app:layout_constraintStart_toStartOf="@+id/playerNumberTv"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="4" />
+            tools:text="Very Long Player Name" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            app:layout_constraintBottom_toBottomOf="@+id/playerNameTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/playerNameTv"
+            app:buttonTint="@color/colorAccent"
+            tools:checked="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

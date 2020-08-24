@@ -23,4 +23,22 @@
         android:label="@string/title_new_player"
         tools:layout="@layout/fragment_create_player_profile" />
 
+    <fragment
+        android:id="@+id/navigation_add_new_game_match_details"
+        android:name="com.suudupa.lacoupe.fragment.AddNewGameMatchDetailsFragment"
+        android:label="@string/title_new_game"
+        tools:layout="@layout/fragment_add_new_game_match_details" />
+
+    <fragment
+        android:id="@+id/navigation_add_new_game_match_players"
+        android:name="com.suudupa.lacoupe.fragment.AddNewGameMatchPlayersFragment"
+        android:label="@string/add_participants"
+        tools:layout="@layout/fragment_add_new_game_match_players" />
+
+    <fragment
+        android:id="@+id/navigation_add_new_game_match_players_score"
+        android:name="com.suudupa.lacoupe.fragment.AddNewGameMatchPlayersScoreFragment"
+        android:label="@string/enter_score"
+        tools:layout="@layout/fragment_add_new_game_match_players" />
+
 </navigation>

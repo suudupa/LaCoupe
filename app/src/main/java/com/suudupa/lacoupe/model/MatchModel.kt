@@ -10,7 +10,8 @@ import kotlinx.android.parcel.RawValue
 @Parcelize
 open class MatchModel(
         @PrimaryKey
-        var matchId: String = "",
+        var matchId: Int = 0,
         var date: String = "",
+        var field: String = "",
         var players: @RawValue RealmList<PlayerModel> = RealmList()
 ) : RealmObject(), Parcelable

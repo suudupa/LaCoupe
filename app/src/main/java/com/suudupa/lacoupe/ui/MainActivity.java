@@ -31,20 +31,26 @@ public class MainActivity extends AppCompatActivity implements NavController.OnD
 
     @Override
     public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-        if (destination.getId() == R.id.navigation_create_player_profile) {
-            binding.newItemBtn.setVisibility(View.GONE);
-            binding.navView.setVisibility(View.GONE);
-        } else {
-            binding.newItemBtn.setVisibility(View.VISIBLE);
-            binding.navView.setVisibility(View.VISIBLE);
-            if (destination.getId() == R.id.navigation_standings) {
-                binding.newItemBtn.setImageResource(R.drawable.ic_new_player);
-                binding.newItemBtn.setTag(R.drawable.ic_new_player);
+        switch (destination.getId()) {
+            case R.id.navigation_create_player_profile:
+            case R.id.navigation_add_new_game_match_details:
+            case R.id.navigation_add_new_game_match_players:
+            case R.id.navigation_add_new_game_match_players_score:
+                binding.newItemBtn.setVisibility(View.GONE);
+                binding.navView.setVisibility(View.GONE);
+                break;
+            default:
+                binding.newItemBtn.setVisibility(View.VISIBLE);
                 binding.newItemBtn.setOnClickListener(this);
-            } else {
-                binding.newItemBtn.setImageResource(R.drawable.ic_new_game);
-                binding.newItemBtn.setTag(R.drawable.ic_new_game);
-            }
+                binding.navView.setVisibility(View.VISIBLE);
+                break;
+        }
+        if (destination.getId() == R.id.navigation_standings) {
+            binding.newItemBtn.setImageResource(R.drawable.ic_new_player);
+            binding.newItemBtn.setTag(R.drawable.ic_new_player);
+        } else {
+            binding.newItemBtn.setImageResource(R.drawable.ic_new_game);
+            binding.newItemBtn.setTag(R.drawable.ic_new_game);
         }
     }
 
@@ -57,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavController.OnD
             bundle.putInt("textView", R.string.add_new_player_profile_message);
             bundle.putBoolean("isUserFirstTime", false);
             navController.navigate(R.id.navigation_create_player_profile, bundle);
+        } else {
+            navController.navigate(R.id.navigation_add_new_game_match_details);
         }
     }
 }

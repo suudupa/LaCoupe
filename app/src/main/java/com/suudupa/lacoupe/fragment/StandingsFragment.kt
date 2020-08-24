@@ -30,6 +30,10 @@ class StandingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        initViews()
+    }
+
+    private fun initViews() {
         standingsAdapter = StandingsAdapter(standingsViewModel.players.value)
         binding.standingsRv.adapter = standingsAdapter
         val animationController: LayoutAnimationController = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_anim_fall_down)

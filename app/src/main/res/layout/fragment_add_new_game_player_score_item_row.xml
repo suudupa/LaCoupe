@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.suudupa.lacoupe.model.UserModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/playerNumberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="#88" />
+
+        <TextView
+            android:id="@+id/playerNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{data.fullName}"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/playerNumberTv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Very Long Player Name" />
+
+        <EditText
+            android:id="@+id/playerScoreEt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/player_score_hint"
+            android:background="@drawable/rectangular_edit_text"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:hint="@string/player_score_hint"
+            android:inputType="number"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:theme="@style/EditTextTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/playerNameTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/playerNameTv"
+            tools:text="4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

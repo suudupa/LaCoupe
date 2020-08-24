@@ -6,6 +6,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 open class PlayerModel (
-        var name: String = "",
+        var user: UserModel? = null,
         var score: Int = 0
 ): RealmObject(), Parcelable

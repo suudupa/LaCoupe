@@ -20,9 +20,8 @@ class StandingsViewModel : ViewModel() {
         getPlayers()
     }
 
-
     private fun getPlayers() {
-        _players.value = realmRepo.realm.where(UserModel::class.java).sort("wins", Sort.DESCENDING).findAllAsync()
+        _players.value = realmRepo.realm.where(UserModel::class.java).sort("wins", Sort.DESCENDING).findAll()
     }
 
     val playersChangeListener: RealmChangeListener<RealmResults<UserModel>> = RealmChangeListener {

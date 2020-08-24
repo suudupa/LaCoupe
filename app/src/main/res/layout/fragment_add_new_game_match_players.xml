@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
-        tools:context=".fragment.ScoresFragment">
+        android:background="@color/colorPrimary">
 
         <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
@@ -24,37 +25,54 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
                 android:orientation="vertical"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/greetingTv"
+                    android:id="@+id/titleTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:paddingTop="35dp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorAccent"
-                    android:textSize="24sp"
-                    tools:text="Good Morning, \nUser" />
+                    android:textSize="22sp"
+                    tools:text="@string/enter_score" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/matchesRv"
+                    android:id="@+id/playerListRv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
                     android:clipToPadding="false"
                     android:overScrollMode="never"
+                    android:padding="8dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:itemCount="3"
-                    tools:listitem="@layout/fragment_scores_game_item_row" />
+                    tools:itemCount="8"
+                    tools:listitem="@layout/fragment_add_new_game_player_score_item_row" />
 
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/doneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="37dp"
+            tools:srcCompat="@drawable/ic_done" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -14,7 +14,6 @@
         tools:context=".fragment.StandingsFragment">
 
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
@@ -60,39 +59,39 @@
                         android:id="@+id/nameTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginStart="40dp"
                         android:fontFamily="sans-serif-light"
                         android:text="@string/player"
                         android:textColor="@color/colorAccent"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toEndOf="@id/rankingTv"
+                        app:layout_constraintStart_toStartOf="@+id/rankingTv"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/gamesPlayedTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="80dp"
                         android:fontFamily="sans-serif-light"
                         android:text="@string/games_played"
                         android:textColor="@color/colorAccent"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/winsTv"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/winsTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
                         android:fontFamily="sans-serif-light"
                         android:text="@string/win"
                         android:textColor="@color/colorAccent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/gamesPlayedTv"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <View

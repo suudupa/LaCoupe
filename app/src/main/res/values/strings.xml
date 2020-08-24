@@ -22,6 +22,12 @@
     <string name="win">W</string>
     <string name="add_new_game">Add a new game by\nfilling in the match details.</string>
     <string name="game_location_hint">Field Name</string>
-    <string name="game_date_hint">Date</string>
+    <string name="game_date_hint">Select Date</string>
     <string name="title_new_game">New Game</string>
+    <string name="add_participants">Add Participants</string>
+    <string name="enter_score">Enter Player Scores</string>
+    <string name="error_empty_field_name">Field not entered.</string>
+    <string name="error_field_invalid">Field name cannot exceed 50 characters.</string>
+    <string name="player_number">#%s</string>
+    <string name="player_score_hint">0</string>
 </resources>

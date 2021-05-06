@@ -20,6 +20,7 @@ class AddNewGamePlayerScoreListAdapter() : RecyclerView.Adapter<RecyclerView.Vie
     var players = RealmList<PlayerModel>()
 
     constructor(playerList: UserListModel) : this() {
+        playerList.users.sortWith(compareBy { it.jerseyNumber })
         mParticipants = playerList.users
     }
     

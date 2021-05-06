@@ -3,7 +3,6 @@ package com.suudupa.lacoupe.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.suudupa.lacoupe.R
 import com.suudupa.lacoupe.databinding.FragmentAddNewGamePlayerItemRowBinding

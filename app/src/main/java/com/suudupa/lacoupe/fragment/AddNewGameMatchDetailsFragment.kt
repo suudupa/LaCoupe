@@ -35,6 +35,7 @@ class AddNewGameMatchDetailsFragment : Fragment() {
 
     private fun initEvents() {
         binding.dateEt.setOnClickListener {
+            Utils.hideSoftKeyboard(activity)
             DatePickerDialog(requireContext(), date, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show()
         }
         binding.nextBtn.setOnClickListener {

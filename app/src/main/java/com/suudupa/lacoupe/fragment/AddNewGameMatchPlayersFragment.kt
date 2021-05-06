@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.suudupa.lacoupe.R
@@ -15,10 +14,8 @@ import com.suudupa.lacoupe.adapter.AddNewGamePlayerListAdapter
 import com.suudupa.lacoupe.databinding.FragmentAddNewGameMatchPlayersBinding
 import com.suudupa.lacoupe.model.MatchModel
 import com.suudupa.lacoupe.model.UserListModel
-import com.suudupa.lacoupe.model.PlayerModel
-import com.suudupa.lacoupe.model.UserModel
 import com.suudupa.lacoupe.utility.Utils
-import com.suudupa.lacoupe.viewModel.StandingsViewModel
+import com.suudupa.lacoupe.viewModel.PlayerListViewModel
 
 class AddNewGameMatchPlayersFragment : Fragment() {
 
@@ -26,8 +23,8 @@ class AddNewGameMatchPlayersFragment : Fragment() {
     private lateinit var playerListAdapter: AddNewGamePlayerListAdapter
     private lateinit var match: MatchModel
 
-    private val standingsViewModel: StandingsViewModel by lazy {
-        ViewModelProvider(this).get(StandingsViewModel::class.java)
+    private val playerListViewModel: PlayerListViewModel by lazy {
+        ViewModelProvider(this).get(PlayerListViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -51,7 +48,7 @@ class AddNewGameMatchPlayersFragment : Fragment() {
     private fun initViews() {
         binding.titleTv.text = requireContext().getString(R.string.add_participants)
         binding.doneBtn.setImageResource(R.drawable.ic_next)
-        playerListAdapter = AddNewGamePlayerListAdapter(standingsViewModel.players.value)
+        playerListAdapter = AddNewGamePlayerListAdapter(playerListViewModel.players.value)
         binding.playerListRv.adapter = playerListAdapter
         val animationController: LayoutAnimationController = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_anim_fall_down)
         binding.playerListRv.layoutAnimation = animationController
@@ -70,11 +67,11 @@ class AddNewGameMatchPlayersFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        standingsViewModel.players.value?.addChangeListener(standingsViewModel.playersChangeListener)
+        playerListViewModel.players.value?.addChangeListener(playerListViewModel.playersChangeListener)
     }
 
     override fun onStop() {
         super.onStop()
-        standingsViewModel.players.value?.removeChangeListener(standingsViewModel.playersChangeListener)
+        playerListViewModel.players.value?.removeChangeListener(playerListViewModel.playersChangeListener)
     }
 }

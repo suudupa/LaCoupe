@@ -6,9 +6,11 @@ import android.graphics.Color
 import android.view.Gravity
 import android.view.WindowManager
 import android.view.animation.AlphaAnimation
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import com.suudupa.lacoupe.R
 import java.text.SimpleDateFormat
 import java.util.*
@@ -32,6 +34,11 @@ object Utils {
             in 17..23 -> R.string.goodEvening
             else -> R.string.hello
         }
+    }
+
+    fun todayDate(): String {
+        val sdf = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault())
+        return sdf.format(Date())
     }
 
     fun showErrorMessage(tv: TextView, msg: Int) {
@@ -58,8 +65,8 @@ object Utils {
         toast.show()
     }
 
-    fun todayDate(): String {
-        val sdf = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault())
-        return sdf.format(Date())
+    fun hideSoftKeyboard(activity: FragmentActivity?) {
+        val inputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(activity.currentFocus?.windowToken, 0)
     }
 }
